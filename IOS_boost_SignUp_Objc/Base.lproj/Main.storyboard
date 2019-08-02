@@ -52,6 +52,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.84157437089999998" green="0.223867327" blue="0.2744961977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zkc-Si-a1B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAX-2Z-hu9">
                                 <rect key="frame" x="50" y="544" width="100" height="40"/>
@@ -62,6 +65,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
+                                    <action selector="signUpBntClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w3D-BW-ppQ"/>
                                     <segue destination="IKF-2N-e6Q" kind="presentation" id="wKG-XQ-df2"/>
                                 </connections>
                             </button>
@@ -86,6 +90,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="yNr-Xf-Sin"/>
+                    <connections>
+                        <outlet property="idTextField" destination="K79-x7-2lk" id="qGA-6e-hAl"/>
+                        <outlet property="pwTextField" destination="IsA-Ln-zdj" id="pBo-WT-RB4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -94,7 +102,7 @@
         <!--View Controller-->
         <scene sceneID="lSE-I6-nGM">
             <objects>
-                <viewController id="hvv-bH-c1Z" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Info" id="hvv-bH-c1Z" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NJR-31-JNX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
