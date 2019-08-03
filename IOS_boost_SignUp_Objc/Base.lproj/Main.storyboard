@@ -98,10 +98,10 @@
             </objects>
             <point key="canvasLocation" x="729" y="111"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="lSE-I6-nGM">
             <objects>
-                <viewController storyboardIdentifier="Info" id="hvv-bH-c1Z" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Info" id="hvv-bH-c1Z" customClass="LoginViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NJR-31-JNX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -184,18 +184,40 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iDg-zC-SWI">
+                                <rect key="frame" x="40" y="722" width="334" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ZnG-f7-Xp1"/>
+                                </constraints>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.84157437089999998" green="0.223867327" blue="0.2744961977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnClick:" destination="hvv-bH-c1Z" eventType="touchUpInside" id="38W-yc-L4s"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Li7-Fu-mEW" firstAttribute="leading" secondItem="mlq-St-lB1" secondAttribute="leading" constant="20" id="5AX-s1-IsY"/>
+                            <constraint firstItem="mlq-St-lB1" firstAttribute="bottom" secondItem="iDg-zC-SWI" secondAttribute="bottom" constant="100" id="NXE-o1-hhU"/>
                             <constraint firstItem="Pyp-5i-t1L" firstAttribute="top" secondItem="mlq-St-lB1" secondAttribute="top" constant="100" id="YXT-hv-cDq"/>
                             <constraint firstItem="mlq-St-lB1" firstAttribute="trailing" secondItem="Pyp-5i-t1L" secondAttribute="trailing" constant="20" id="YXe-J6-lhC"/>
                             <constraint firstItem="Li7-Fu-mEW" firstAttribute="top" secondItem="Pyp-5i-t1L" secondAttribute="bottom" constant="30" id="YZU-ki-mow"/>
+                            <constraint firstItem="iDg-zC-SWI" firstAttribute="leading" secondItem="mlq-St-lB1" secondAttribute="leading" constant="40" id="b9T-RL-sPu"/>
+                            <constraint firstItem="mlq-St-lB1" firstAttribute="trailing" secondItem="iDg-zC-SWI" secondAttribute="trailing" constant="40" id="e5b-68-Lkv"/>
                             <constraint firstItem="Pyp-5i-t1L" firstAttribute="leading" secondItem="mlq-St-lB1" secondAttribute="leading" constant="20" id="jsM-5l-07c"/>
                             <constraint firstItem="mlq-St-lB1" firstAttribute="trailing" secondItem="Li7-Fu-mEW" secondAttribute="trailing" constant="20" id="wSb-jI-Omh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mlq-St-lB1"/>
                     </view>
+                    <connections>
+                        <outlet property="birthLabel" destination="Xqm-c4-f4W" id="rwv-zG-5Bf"/>
+                        <outlet property="cancelBtn" destination="iDg-zC-SWI" id="LzN-Vx-wSZ"/>
+                        <outlet property="idLabel" destination="cRX-mk-oV8" id="07d-7g-Dau"/>
+                        <outlet property="pwLabel" destination="IGb-Du-1Ip" id="XB5-4f-fUI"/>
+                        <outlet property="textView" destination="Li7-Fu-mEW" id="v5R-jO-xkX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ED0-xz-DUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -236,7 +258,7 @@
                                 <color key="tintColor" red="0.84157437089999998" green="0.223867327" blue="0.2744961977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Cancel"/>
                                 <connections>
-                                    <action selector="cancelBntClick:" destination="h3y-F2-8fq" eventType="touchUpInside" id="ew6-gn-rEl"/>
+                                    <action selector="cancelBtnClick:" destination="h3y-F2-8fq" eventType="touchUpInside" id="ew6-gn-rEl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jbA-d0-fj8">
@@ -248,7 +270,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="nextBntClick:" destination="h3y-F2-8fq" eventType="touchUpInside" id="cI5-Da-G2o"/>
+                                    <action selector="nextBtnClick:" destination="h3y-F2-8fq" eventType="touchUpInside" id="cI5-Da-G2o"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="k4c-Pv-Ydq">
@@ -287,7 +309,7 @@
                                 <rect key="frame" x="30" y="138" width="180" height="180"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <action selector="imgBntClick:" destination="h3y-F2-8fq" eventType="touchUpInside" id="SmM-lG-MNt"/>
+                                    <action selector="imgBtnClick:" destination="h3y-F2-8fq" eventType="touchUpInside" id="SmM-lG-MNt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -368,7 +390,7 @@
                                     <color key="titleColor" red="0.84157437089999998" green="0.223867327" blue="0.2744961977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelBntClick:" destination="cYQ-Ey-QDd" eventType="touchUpInside" id="qbj-v2-pd9"/>
+                                    <action selector="cancelBtnClick:" destination="cYQ-Ey-QDd" eventType="touchUpInside" id="qbj-v2-pd9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06j-Qj-P6J">

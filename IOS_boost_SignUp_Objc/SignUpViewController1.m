@@ -33,7 +33,7 @@
 }
 
 
-- (IBAction)nextBntClick:(UIButton *)sender {
+- (IBAction)nextBtnClick:(UIButton *)sender {
     
     if([self emptyCheck]){
         
@@ -58,12 +58,12 @@
         [self performSegueWithIdentifier:@"signUp" sender:self];
     }
 }
-- (IBAction)cancelBntClick:(UIButton *)sender {
+- (IBAction)cancelBtnClick:(UIButton *)sender {
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)imgBntClick:(id)sender {
+- (IBAction)imgBtnClick:(id)sender {
     
     imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     imagePicker.allowsEditing = true;

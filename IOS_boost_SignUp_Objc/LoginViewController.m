@@ -7,26 +7,40 @@
 //
 
 #import "LoginViewController.h"
+#import "UserInfo.h"
 
-@interface LoginViewController ()
-
-@end
-
-@implementation LoginViewController
+@implementation LoginViewController{
+    
+    __weak IBOutlet UILabel *idLabel;
+    __weak IBOutlet UILabel *pwLabel;
+    __weak IBOutlet UILabel *birthLabel;
+    __weak IBOutlet UITextView *textView;
+    __weak IBOutlet UIButton *cancelBtn;
+    
+    UserInfo *user;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    user = [UserInfo getInstance];
+    [self setUserInfo];
+    [self designTextView];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setUserInfo {
+    idLabel.text = user.userId;
+    pwLabel.text = user.userPw;
+    birthLabel.text = user.userBirth;
+    textView.text = [@"가나다라 %@ 1234"stringByAppendingString:user.userMemo];
 }
-*/
+
+- (void)designTextView {
+    textView.layer.borderWidth = 1.0;
+    textView.layer.cornerRadius = 7.0;
+    textView.layer.borderColor = UIColor.blackColor.CGColor;
+}
+- (IBAction)cancelBtnClick:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

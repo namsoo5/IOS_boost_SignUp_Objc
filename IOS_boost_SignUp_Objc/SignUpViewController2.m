@@ -40,7 +40,7 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)cancelBntClick:(UIButton *)sender {
+- (IBAction)cancelBtnClick:(UIButton *)sender {
     UserInfo.getInstance.userMemo = @"";
     UserInfo.getInstance.userId = @"";
     UserInfo.getInstance.userPw = @"";
