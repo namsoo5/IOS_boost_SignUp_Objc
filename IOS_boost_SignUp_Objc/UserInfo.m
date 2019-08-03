@@ -2,29 +2,25 @@
 //  UserInfo.m
 //  IOS_boost_SignUp_Objc
 //
-//  Created by 남수김 on 02/08/2019.
+//  Created by 남수김 on 03/08/2019.
 //  Copyright © 2019 ns. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "UserInfo.h"
 
-@interface User: NSObject
+@implementation UserInfo
 
-@property NSString *userId;
-@property NSString *userPw;
-@property NSString *userBirth;
-@property NSString *userMemo;
-
-@end
-
-
-@implementation User
-
-static User *shared;
-
-+ (instancetype)sharedCreate {
-    shared = [[User alloc] init];
+//인스턴스객체 생성
++ (instancetype)getInstance{
+    static dispatch_once_t pred;
+    static UserInfo *shared = nil;
+    
+    dispatch_once(&pred, ^{
+        shared = [[UserInfo alloc] init];
+    });
+    
     return shared;
 }
+
 
 @end
