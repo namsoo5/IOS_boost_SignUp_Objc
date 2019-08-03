@@ -47,9 +47,13 @@
         info.userMemo = textView.text;
         
         NSLog(@"%@, %@", info.userId, info.userPw);
+        
+        //이미 지정해둔 manual segue
+        [self performSegueWithIdentifier:@"signUp" sender:self];
     }
 }
 - (IBAction)cancelBntClick:(UIButton *)sender {
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

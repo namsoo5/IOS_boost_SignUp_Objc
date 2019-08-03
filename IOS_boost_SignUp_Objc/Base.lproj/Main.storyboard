@@ -316,10 +316,10 @@
             </objects>
             <point key="canvasLocation" x="2407.2463768115945" y="110.49107142857143"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller2-->
         <scene sceneID="vFv-t5-XAT">
             <objects>
-                <viewController id="cYQ-Ey-QDd" sceneMemberID="viewController">
+                <viewController id="cYQ-Ey-QDd" customClass="SignUpViewController2" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uFe-J7-8wJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -356,6 +356,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="0.84157437089999998" green="0.223867327" blue="0.2744961977" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelBntClick:" destination="cYQ-Ey-QDd" eventType="touchUpInside" id="qbj-v2-pd9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06j-Qj-P6J">
                                 <rect key="frame" x="234" y="712" width="100" height="50"/>
@@ -365,6 +368,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Finish"/>
+                                <connections>
+                                    <action selector="finishBtnClick:" destination="cYQ-Ey-QDd" eventType="touchUpInside" id="5gw-FQ-AGZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -381,6 +387,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3YL-cP-ykF"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="kqe-e9-yv8" id="Mgg-gO-Pop"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SNC-PK-F2W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
