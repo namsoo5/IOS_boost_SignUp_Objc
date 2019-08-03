@@ -17,6 +17,8 @@
     __weak IBOutlet UITextField *pwTextField;
     __weak IBOutlet UITextField *pw2TextField;
     
+    UIImagePickerController *imagePicker;
+    
     UserInfo *info;
 }
 
@@ -24,6 +26,10 @@
     [super viewDidLoad];
     
     info = [UserInfo getInstance];
+    imagePicker = [[UIImagePickerController alloc]init];
+    imagePicker.delegate = self;
+    
+    
 }
 
 
@@ -57,6 +63,27 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)imgBntClick:(id)sender {
+    
+    imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    imagePicker.allowsEditing = true;
+    
+    [self presentViewController:imagePicker animated:YES completion:nil];
+}
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<UIImagePickerControllerInfoKey,id> *)info{
+    
+    //key값으로 이미지 가져오기
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    if(image){
+        imageView.image = image;
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 //빈칸이나 비밀번호 같은지 확인
 - (Boolean)emptyCheck{
@@ -70,5 +97,6 @@
     
     return false;
 }
+
 
 @end

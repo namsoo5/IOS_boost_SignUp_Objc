@@ -16,6 +16,7 @@
 		0615E5FE22F544E500473A2E /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0615E5FD22F544E500473A2E /* UserInfo.m */; };
 		0615E60122F550B400473A2E /* SignUpViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 0615E60022F550B400473A2E /* SignUpViewController1.m */; };
 		0615E60422F5610D00473A2E /* SignUpViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 0615E60322F5610D00473A2E /* SignUpViewController2.m */; };
+		0615E60722F57F4F00473A2E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0615E60622F57F4F00473A2E /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,8 @@
 		0615E60022F550B400473A2E /* SignUpViewController1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController1.m; sourceTree = "<group>"; };
 		0615E60222F5610D00473A2E /* SignUpViewController2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController2.h; sourceTree = "<group>"; };
 		0615E60322F5610D00473A2E /* SignUpViewController2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController2.m; sourceTree = "<group>"; };
+		0615E60522F57F4F00473A2E /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		0615E60622F57F4F00473A2E /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +79,8 @@
 				0615E5FF22F550B400473A2E /* SignUpViewController1.h */,
 				0615E60022F550B400473A2E /* SignUpViewController1.m */,
 				0615E5E422F4661400473A2E /* Main.storyboard */,
+				0615E60522F57F4F00473A2E /* LoginViewController.h */,
+				0615E60622F57F4F00473A2E /* LoginViewController.m */,
 				0615E60222F5610D00473A2E /* SignUpViewController2.h */,
 				0615E60322F5610D00473A2E /* SignUpViewController2.m */,
 				0615E5E722F4661500473A2E /* Assets.xcassets */,
@@ -160,6 +165,7 @@
 				0615E5E322F4661400473A2E /* ViewController.m in Sources */,
 				0615E5EE22F4661500473A2E /* main.m in Sources */,
 				0615E60422F5610D00473A2E /* SignUpViewController2.m in Sources */,
+				0615E60722F57F4F00473A2E /* LoginViewController.m in Sources */,
 				0615E60122F550B400473A2E /* SignUpViewController1.m in Sources */,
 				0615E5E022F4661400473A2E /* AppDelegate.m in Sources */,
 			);

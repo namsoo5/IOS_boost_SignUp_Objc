@@ -211,7 +211,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-UB-c9r">
                                 <rect key="frame" x="30" y="138" width="180" height="180"/>
-                                <color key="backgroundColor" white="0.82829005280000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="6xK-0z-pC9"/>
                                     <constraint firstAttribute="width" secondItem="YMb-UB-c9r" secondAttribute="height" multiplier="1:1" id="mIk-Uh-f8g"/>
@@ -283,9 +283,18 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xf-EJ-7ee">
+                                <rect key="frame" x="30" y="138" width="180" height="180"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="imgBntClick:" destination="h3y-F2-8fq" eventType="touchUpInside" id="SmM-lG-MNt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="3xf-EJ-7ee" firstAttribute="centerX" secondItem="YMb-UB-c9r" secondAttribute="centerX" id="0xd-gw-EQy"/>
+                            <constraint firstItem="3xf-EJ-7ee" firstAttribute="height" secondItem="YMb-UB-c9r" secondAttribute="height" id="4ji-x3-odH"/>
                             <constraint firstItem="et3-Ny-m2c" firstAttribute="top" secondItem="ArP-Sv-hjC" secondAttribute="bottom" constant="50" id="7XG-bP-VIF"/>
                             <constraint firstItem="ArP-Sv-hjC" firstAttribute="top" secondItem="YMb-UB-c9r" secondAttribute="bottom" constant="40" id="9PZ-JB-woK"/>
                             <constraint firstItem="YMb-UB-c9r" firstAttribute="top" secondItem="7pR-Te-f6U" secondAttribute="top" constant="50" id="Gfl-fG-cF0"/>
@@ -298,7 +307,9 @@
                             <constraint firstItem="7pR-Te-f6U" firstAttribute="trailing" secondItem="jbA-d0-fj8" secondAttribute="trailing" constant="40" id="eSO-nt-5V7"/>
                             <constraint firstItem="k4c-Pv-Ydq" firstAttribute="leading" secondItem="YMb-UB-c9r" secondAttribute="trailing" constant="10" id="hY7-cw-acZ"/>
                             <constraint firstItem="jbA-d0-fj8" firstAttribute="top" secondItem="ArP-Sv-hjC" secondAttribute="bottom" constant="50" id="n7c-sN-fyD"/>
+                            <constraint firstItem="3xf-EJ-7ee" firstAttribute="width" secondItem="YMb-UB-c9r" secondAttribute="width" id="pe2-QE-Qr8"/>
                             <constraint firstItem="jbA-d0-fj8" firstAttribute="top" secondItem="ArP-Sv-hjC" secondAttribute="bottom" constant="50" id="w4Z-nI-ph0"/>
+                            <constraint firstItem="3xf-EJ-7ee" firstAttribute="centerY" secondItem="YMb-UB-c9r" secondAttribute="centerY" id="z0a-6w-6IL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7pR-Te-f6U"/>
                     </view>
