@@ -211,6 +211,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-UB-c9r">
                                 <rect key="frame" x="30" y="138" width="180" height="180"/>
+                                <color key="backgroundColor" white="0.82829005280000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="6xK-0z-pC9"/>
                                     <constraint firstAttribute="width" secondItem="YMb-UB-c9r" secondAttribute="height" multiplier="1:1" id="mIk-Uh-f8g"/>
