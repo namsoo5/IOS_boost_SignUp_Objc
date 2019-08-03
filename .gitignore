@@ -6,3 +6,6 @@
 /*.gcno
 
 .DS_Store
+
+### Xcode Patch ###
+**/xcshareddata/WorkspaceSettings.xcsettings
